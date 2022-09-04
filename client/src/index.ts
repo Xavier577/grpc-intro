@@ -25,6 +25,7 @@ client.createTodo(
   }
 );
 
+// this directly fetches the entire todos
 client.readTodos({}, (err: any, response: any) => {
   console.log("getting_all_item");
   if (err != null) {
@@ -33,6 +34,7 @@ client.readTodos({}, (err: any, response: any) => {
   console.log("Recieved from server", response);
 });
 
+// read data through streams
 function readTodosFromStream() {
   const todos: any[] = [];
 
